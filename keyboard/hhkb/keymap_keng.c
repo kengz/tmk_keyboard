@@ -1,5 +1,5 @@
 /*
- * HHKB Layout
+ * Keng's HHKB Layout
  */
 #include "keymap_common.h"
 
@@ -32,19 +32,19 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
      * ,-----------------------------------------------------------.
      * |Pwr| F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12|Ins|Del|
      * |-----------------------------------------------------------|
-     * |Caps |   |   |   |   |   |   |   |Psc|Slk|Pus|Up |   |Backs|
+     * |Caps |Pre|Ply|Nxt|   |   |   |   |Psc|Slk|Pus|   |   |Backs|
      * |-----------------------------------------------------------|
-     * |      |VoD|VoU|Mut|   |   |  *|  /|Hom|PgU|Lef|Rig|Enter   |
+     * |      |VoD|VoU|Mut|   |   |  *|  /|Hom|PgU|   |Up |Enter   |
      * |-----------------------------------------------------------|
      * |        |   |   |   |   |   |  +|  -|End|PgD|Dow|      |   |
      * `-----------------------------------------------------------'
      *       |   |     |                       |     |   |
      *       `-------------------------------------------'
      */
-    KEYMAP(PWR, SLCK,  PAUS,  VOLD, VOLU,  MPLY,  MNXT,  MPRV,  MPLY,  MNXT,  MUTE,VOLD, VOLU, INS, DEL,   \
-           CAPS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,PSCR,SLCK,PAUS, TRNS, TRNS, BSPC,      \
-           TRNS,VOLD,VOLU,MUTE,TRNS,TRNS,PAST,TRNS,TRNS,TRNS,TRNS,UP,PENT,            \
-           TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, TRNS,DOWN,TRNS,TRNS,            \
+    KEYMAP(PWR, F1,  F2,  F3,  F4,  F5,  F6,  F7,  F8,  F9,  F10, F11, F12, INS, DEL,   \
+           CAPS,MPRV,MPLY,MNXT,TRNS,TRNS,TRNS,TRNS,PSCR,SLCK,PAUS, TRNS, TRNS, BSPC,      \
+           TRNS,VOLD,VOLU,MUTE,TRNS,TRNS,PAST,PSLS,HOME,PGUP,TRNS,UP,PENT,            \
+           TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,PPLS,PMNS,END, PGDN,DOWN,TRNS,TRNS,            \
                 TRNS,TRNS,          TRNS,               TRNS,TRNS),
 };
 
