@@ -141,7 +141,7 @@ void keyboard_task(void)
 
                     // This can miss stroke when scan matrix takes long like Topre
                     // process a key per task call
-                    //goto MATRIX_LOOP_END;
+                    goto MATRIX_LOOP_END;
                 }
             }
         }

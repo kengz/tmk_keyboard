@@ -75,10 +75,10 @@ uint8_t matrix_scan(void)
             _delay_us(5);
 
             // Not sure this is needed. This just emulates HHKB controller's behaviour.
-            if (matrix_prev[row] & (1<<col)) {
-                KEY_PREV_ON();
-            }
-            _delay_us(10);
+            // if (matrix_prev[row] & (1<<col)) {
+            //     KEY_PREV_ON();
+            // }
+            // _delay_us(10);
 
             // NOTE: KEY_STATE is valid only in 20us after KEY_ENABLE.
             // If V-USB interrupts in this section we could lose 40us or so
@@ -110,7 +110,7 @@ uint8_t matrix_scan(void)
             // Ignore if this code region execution time elapses more than 20us.
             // MEMO: 20[us] * (TIMER_RAW_FREQ / 1000000)[count per us]
             // MEMO: then change above using this rule: a/(b/c) = a*1/(b/c) = a*(c/b)
-            if (TIMER_DIFF_RAW(TIMER_RAW, last) > 20/(1000000/TIMER_RAW_FREQ)) {
+            if (TIMER_DIFF_RAW(TIMER_RAW, last) > 10/(1000000/TIMER_RAW_FREQ)) {
                 matrix[row] = matrix_prev[row];
             }
 
